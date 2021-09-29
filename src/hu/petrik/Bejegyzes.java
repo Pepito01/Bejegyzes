@@ -9,4 +9,42 @@ public class Bejegyzes {
     private int likeok = 0;
     private LocalDateTime letrejott = LocalDateTime.now();
     private LocalDateTime szerkesztve = LocalDateTime.now();
+
+    public Bejegyzes(String szerzo, String tartalom) {
+        this.szerzo = szerzo;
+        this.tartalom = tartalom;
+
+    }
+
+    public String getSzerzo() {
+        return szerzo;
+    }
+
+    public String getTartalom() {
+        return tartalom;
+    }
+
+    public void setTartalom(String tartalom) {
+        this.tartalom = tartalom;
+        this.szerkesztve = LocalDateTime.now();
+    }
+
+    public int getLikeok() {
+        return likeok;
+    }
+
+    public LocalDateTime getLetrejott() {
+        return letrejott;
+    }
+
+    public LocalDateTime getSzerkesztve() {
+        return szerkesztve;
+    }
+
+    public void like(){
+        this.likeok++;
+    }
+
+
+
 }
